@@ -1,0 +1,70 @@
+$bg : #202124;
+$txt: white;
+$uniq: #FC2015;
+$icon: white;
+
+.sideBar{
+  background-color: $bg;
+  color: $txt;
+  height: 100vh;
+  font-size: 13px;
+  font-weight: bold;
+  ul {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    padding: 0 9em;
+    li{
+      font-weight: bold;
+      padding: 0.5em 0;
+      margin: 0.5em 0;
+      
+      &.current{
+        // border-left: 4px solid $uniq;
+        // margin-left: -6.2em;
+      }
+      i{
+        padding-right: 0.5em;
+        font-size: 150%;
+      }
+    }
+  }
+  button{
+    padding: 0.8em 2.5em;
+  }
+}
+
+.flex-container {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row {
+  width: auto;
+  // border: 1px solid blue;
+}
+.flex-item {
+  padding: 5px;
+  margin: 10px;
+  line-height: 20px;
+  text-align: center;
+}
+
+
+// Bootstrap Overrides
+.btn-primary, .btn-primary:hover, .btn-primary:active{
+  background-color: $uniq;
+  border-color: $uniq;
+}
+
+.btn-primary:focus{
+  background-color: $uniq;
+}
+
+.btn-primary:active:focus{
+  background-color: $uniq;
+}
