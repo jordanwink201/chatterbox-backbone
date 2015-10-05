@@ -2,9 +2,9 @@ var FriendListView = Backbone.View.extend({
   
   el : '#friendList',
 
-  tagName : 'ul',
+  tagName : 'div',
 
-  className : 'list-group',
+  // className : 'list-group',
 
   initialize : function(){
     this.render();
@@ -12,12 +12,16 @@ var FriendListView = Backbone.View.extend({
 
   render : function(){
 
-    this.$el.append(
+    this.$el.children().detach();
+
+    this.$el.html('').append(
       this.collection.map(function(model){
         return new FriendView({model : model}).render();
       })
     );
 
+    var position = $('.tab-content').position();
+    this.$el.css('margin-top', position.top);
 
   }
 
