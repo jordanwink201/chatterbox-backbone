@@ -11,7 +11,8 @@ var MessageView = Backbone.View.extend({
   '),
 
   events : {
-    'click .icon-heart' : 'addFriend'
+    'click .icon-heart' : 'addFriend',
+    'click .icon-budicon-32' : 'removeMessage'
   },
 
   render : function(){
@@ -24,6 +25,11 @@ var MessageView = Backbone.View.extend({
 
     this.model.addToFriendsList(friend);
     
+  },
+
+  removeMessage : function(e){
+    e.preventDefault();
+
   }
 
 });
