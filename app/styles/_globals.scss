@@ -1,3 +1,88 @@
+// Background
+$bg : #F4F8F9;
+
 html, body{
   font-family: 'Open Sans', sans-serif;
+  background-color: $bg;
+}
+
+ul{
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+// Bootstrap Overrides
+.btn-primary, .btn-primary:hover, .btn-primary:active{
+  background-color: $uniq;
+  border-color: $uniq;
+}
+
+.btn-primary:focus{
+  background-color: $uniq;
+}
+
+.btn-primary:active:focus{
+  background-color: $uniq;
+}
+
+.jumbotron{
+  margin-bottom: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  background-color: white;
+}
+
+.row{
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.nav-tabs > li > a{
+  border-radius: 0px;
+  border: 0px solid #ddd !important;
+  background-color: #FBFCFE;
+}
+
+.nav-tabs{
+  border: 0px solid #ddd !important;
+}
+
+a{
+  color: inherit;
+}
+
+ul.list-group{
+  margin-bottom: 15px;
+}
+
+li.list-group-item{
+  border-radius: 0px !important;
+  margin-bottom: 0px;
+  border: 0px solid red;
+  border-bottom: 1px solid rgba(32, 33, 36, 0.10);
+  &:last-child{
+    border-bottom: 0px solid red;
+  }
+}
+
+// Flexbox
+.flex-container {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row {
+  width: auto;
+  // border: 1px solid blue;
+}
+.flex-item {
+  padding: 5px;
+  margin: 10px;
+  line-height: 20px;
+  text-align: center;
 }

@@ -4,5 +4,12 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import 'sidenav';
+
+@import 'main';
+
+// Messages Project
+@import 'messages';
+
 @import 'sidebar';
 @import 'globals';

@@ -31,14 +31,15 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-  <div class="col-xs-3 sideBar">
-
+  <div class="col-xs-2 sideNav">
     <div class="flex-container">
 
       <div class="row"> 
+
         <div class="flex-item">
           <img class="img-circle" src="images/profile.jpg" width="30%" />
         </div>
+
         <div class="flex-item">
           <ul>
             <li class="current"><i class="icon-caddie-shop-shopping-streamline"></i>Dashboard</li>
@@ -52,32 +53,122 @@
           <button class="btn btn-primary">Sign Out</button>
         </div>
 
-      
       </div>
 
     </div>
-
   </div>
 
+  <div class="col-xs-8 mainContent">
+    <div class="row">
+      <h1>Room Name Maker Square</h1>
+      <div class="tabBG">
+
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#activeProjects" role="tab" data-toggle="tab"><i class="icon-budicon-40"></i>Active Projects</a>
+          </li>
+          <li role="presentation">
+            <a href="#profile" role="tab" data-toggle="tab"><i class="icon-budicon-41"></i>Profile</a>
+          </li>
+          <li role="presentation">
+            <a href="#messages" role="tab" data-toggle="tab"><i class="icon-budicon-38"></i>Messages</a>
+          </li>
+          <li role="presentation">
+            <a href="#settings" role="tab" data-toggle="tab"><i class="icon-budicon-42"></i>Settings</a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="activeProjects">
+            <div class="jumbotron">
+
+              <form class="form-inline">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="roomNameField" placeholder="Enter Room Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="messageField" placeholder="Enter Message">
+                </div>
+                <button id="submit" class="btn btn-primary" type="submit">Send Message</button>
+              </form>
 
 
-<!--     <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-3 sideBar">
-          <img class="img-circle" src="images/profile.jpg" width="30%" />
-          <ul>
-            <li class="current"><i class="icon-caddie-shop-shopping-streamline"></i>Dashboard</li>
-            <li><i class="icon-budicon-25"></i>Dashboard</li>
-            <li><i class="icon-social-amazon"></i>Dashboard</li>
-            <li><i class="icon-budicon-31"></i>Dashboard</li>
-          </ul>
-          <button class="btn btn-primary">Sign Out</button>
+              <table>
+                <tr>
+                  <th>TIME</th>
+                  <th>USER NAME</th>
+                  <th>TEXT</th>
+                </tr>
+                <tr>
+                  <td>9:45 PM</td>
+                  <td>Jordan Winkelman</td>
+                  <td>Donec faucibus viverra imperdiet. Nulla blandit euismod porttitor. Sed quam libero, 
+ullamcorper et eleifend a, aliquet ac quam.</td>
+                </tr>
+                <tr>
+                  <td>9:45 PM</td>
+                  <td>Jordan Winkelman</td>
+                  <td>Donec faucibus viverra imperdiet. Nulla blandit euismod porttitor. Sed quam libero, 
+ullamcorper et eleifend a, aliquet ac quam.</td>
+                </tr>
+                <tr>
+                  <td>9:45 PM</td>
+                  <td>Jordan Winkelman</td>
+                  <td>Donec faucibus viverra imperdiet. Nulla blandit euismod porttitor. Sed quam libero, 
+ullamcorper et eleifend a, aliquet ac quam.</td>
+                </tr>                
+              </table>
+
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="profile">
+            
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="messages">
+            
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="settings">
+            
+          </div>
         </div>
-        <div class="col-xs-8 dashBoard">
-          <h1>DashBoard</h1>
-        </div>
+
       </div>
-    </div> -->
+    </div>
+  </div>
+
+  <div class="col-xs-2 sideBar">
+    <div class="row">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <img class="img-circle" src="images/profile.jpg" width="30%">
+          <p>Jordan Winkelman</p>
+        </li>
+        <li class="list-group-item">
+          <img class="img-circle" src="images/profile.jpg" width="30%">
+          <p>Jordan Winkelman</p>
+        </li>
+        <li class="list-group-item">
+          <img class="img-circle" src="images/profile.jpg" width="30%">
+          <p>Jordan Winkelman</p>
+        </li>
+      </ul>
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          <img class="img-circle" src="images/profile.jpg" width="30%">
+          <p>Jordan Winkelman</p>
+        </li>
+        <li class="list-group-item">
+          <img class="img-circle" src="images/profile.jpg" width="30%">
+          <p>Jordan Winkelman</p>
+        </li>
+        <li class="list-group-item">
+          <img class="img-circle" src="images/profile.jpg" width="30%">
+          <p>Jordan Winkelman</p>
+        </li>
+      </ul>
+    </div>
+  </div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->

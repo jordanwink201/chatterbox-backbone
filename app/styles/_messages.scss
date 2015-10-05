@@ -1,0 +1,26 @@
+.tabBG{
+  margin-top: 15px;
+}
+
+form {
+  padding: 1em 0;
+  border-bottom: 1px solid rgba(32, 33, 36, 0.10);
+}
+
+
+tr{
+  height: 70px;
+  font-weight: regular;
+  font-size: 13px;
+  color: #262B2E;
+  &:first-child{
+    height: 50px;
+    border-bottom: 1px solid rgba(32, 33, 36, 0.10);
+  }
+}
+
+th{
+  font-size: 14px;
+  color: #262B2E;
+  font-weight: semi-bold;
+}
