@@ -9,9 +9,6 @@ var MessageView = Backbone.View.extend({
     <td><a href=""><i class="icon-budicon-32"></i></a></td> \
   '),
 
-
-  // <td><%= (username ? username : "") %></td>
-
   render : function(){
     return this.$el.html( this.template( this.model.attributes ) );
   }
