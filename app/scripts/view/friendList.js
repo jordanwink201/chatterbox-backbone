@@ -2,9 +2,11 @@ var FriendListView = Backbone.View.extend({
   
   el : '#friendList',
 
-  tagName : 'div',
+  tagName : 'ul',
 
-  // className : 'list-group',
+  className : 'list-group',
+
+  template : _.template('<li class="list-group-item">You Have No Friends</li>'),
 
   initialize : function(){
     this.render();
@@ -12,13 +14,15 @@ var FriendListView = Backbone.View.extend({
 
   render : function(){
 
-    this.$el.children().detach();
-
-    this.$el.html('').append(
-      this.collection.map(function(model){
-        return new FriendView({model : model}).render();
-      })
-    );
+    if (this.collection.length === 0) {
+      this.$el.html( this.template() );
+    } else {
+      this.$el.html('').append(
+        this.collection.map(function(model){
+          return new FriendView({model : model}).render();
+        })
+      );
+    }
 
     var position = $('.tab-content').position();
     this.$el.css('margin-top', position.top);

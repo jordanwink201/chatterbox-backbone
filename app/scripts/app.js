@@ -23,7 +23,7 @@ $(function(){
     }
   ];
   
-  var friendList = new FriendList(friends);
+  var friendList = new FriendList();
   var friendView = new FriendListView({ collection : friendList });
 
 });
