@@ -1,7 +1,12 @@
 $(function(){
 
+  var friends = [
+    {
+      username : 'Jordan Winkelman'
+    }
+  ];
   // Friend View And List View
-  var friendList = new FriendList();
+  var friendList = new FriendList(friends);
   var friendListView = new FriendListView({ collection : friendList });
 
   // Message Collection

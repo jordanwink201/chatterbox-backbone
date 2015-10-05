@@ -50,25 +50,21 @@
   <div class="col-xs-2 sideNav">
     <div class="flex-container">
 
-      <div class="row"> 
+<!--       <div class="flex-item">
+        <img class="img-circle" src="images/profile.jpg" width="30%" />
+      </div>
 
-        <div class="flex-item">
-          <img class="img-circle" src="images/profile.jpg" width="30%" />
-        </div>
+      <div class="flex-item">
+        <ul>
+          <li class="current"><i class="icon-caddie-shop-shopping-streamline"></i>Dashboard</li>
+          <li><i class="icon-budicon-25"></i>Dashboard</li>
+          <li><i class="icon-social-amazon"></i>Dashboard</li>
+          <li><i class="icon-budicon-31"></i>Dashboard</li>
+        </ul>
+      </div> -->
 
-        <div class="flex-item">
-          <ul>
-            <li class="current"><i class="icon-caddie-shop-shopping-streamline"></i>Dashboard</li>
-            <li><i class="icon-budicon-25"></i>Dashboard</li>
-            <li><i class="icon-social-amazon"></i>Dashboard</li>
-            <li><i class="icon-budicon-31"></i>Dashboard</li>
-          </ul>
-        </div>
-
-        <div class="flex-item">
-          <button class="btn btn-primary">Sign Out</button>
-        </div>
-
+      <div class="flex-item">
+        <button class="btn btn-primary">Sign Out</button>
       </div>
 
     </div>
@@ -121,16 +117,6 @@
 
   <div class="col-xs-2 sideBar">
     <div class="row" id="friendList"></div>
-    <div class="row" id="roomList">
-      <ul class="list-group">
-        <li class="list-group-item">
-          <select class="form-control">
-            <option value="one">Room One</option>
-            <option value="two">Room Two</option>
-          </select>
-        </li>
-      </ul>
-    </div>
   </div>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -150,6 +136,9 @@
 
     <!-- Parse -->
     <script src="scripts/config.js"></script>
+
+    <!-- Styles -->
+    <script src="scripts/styles.js"></script>
 
     <!-- Backbone -->
     <script src="scripts/model/message.js"></script>
