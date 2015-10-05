@@ -8,8 +8,13 @@ var Messages = Backbone.Collection.extend({
     this.fetch({data : { order: '-createdAt' }});
   },
 
-  parse : function(results){
-    return results.results;
+  parse : function(response){
+    console.log('parsing...');
+    var results = [];
+    for (var i = response.results.length - 1; i >= 90; i--) {
+      results.push(response.results[i]);
+    }
+    return results;
   }
 
 

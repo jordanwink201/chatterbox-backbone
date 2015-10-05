@@ -32,22 +32,19 @@
     <![endif]-->
 
   <script type="text/template" id="messageForm">
-
-  <div class="row">
-    
-    <div class="col-lg-4 form">
-      <input type="text" id="roomName" class="form-control" placeholder="Room Name...">
-    </div>
-    <div class="col-lg-8">
-      <div class="input-group form">
-        <input type="text" class="form-control" id="message" placeholder="Enter Message...">
-        <span class="input-group-btn">
-          <button class="btn btn-primary submit" type="submit">Send Message</button>
-        </span>
+    <div class="row">
+      <div class="col-lg-4 form">
+        <input type="text" id="roomName" class="form-control" placeholder="Room Name...">
       </div>
-    </div><!-- /.col-lg-6 -->
-  </div><!-- /.row -->
-
+      <div class="col-lg-8">
+        <div class="input-group form">
+          <input type="text" class="form-control" id="message" placeholder="Enter Message...">
+          <span class="input-group-btn">
+            <button class="btn btn-primary submit" type="submit">Send Message</button>
+          </span>
+        </div>
+      </div>
+    </div>
   </script>
 
   <div class="col-xs-2 sideNav">
@@ -123,22 +120,7 @@
   </div>
 
   <div class="col-xs-2 sideBar">
-    <div class="row">
-
-      <ul class="list-group">
-        <li class="list-group-item">
-          <img class="img-circle" src="images/profile.jpg" width="30%">
-          <p>Jordan Winkelman</p>
-        </li>
-        <li class="list-group-item">
-          <img class="img-circle" src="images/profile.jpg" width="30%">
-          <p>Jordan Winkelman</p>
-        </li>
-        <li class="list-group-item">
-          <img class="img-circle" src="images/profile.jpg" width="30%">
-          <p>Jordan Winkelman</p>
-        </li>
-      </ul>
+    <div class="row" id="friendList">
 
     </div>
   </div>
@@ -167,10 +149,14 @@
 
     <!-- Backbone -->
     <script src="scripts/model/message.js"></script>
+    <script src="scripts/model/friend.js"></script>
     <script src="scripts/collection/messages.js"></script>
+    <script src="scripts/collection/friends.js"></script>
     <script src="scripts/view/messageList.js"></script>
     <script src="scripts/view/message.js"></script>
     <script src="scripts/view/form.js"></script>
+    <script src="scripts/view/friendList.js"></script>
+    <script src="scripts/view/friend.js"></script>
   
     <!-- App -->
     <script src="scripts/app.js"></script>

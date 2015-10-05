@@ -11,6 +11,14 @@ ul{
   padding-left: 0px;
 }
 
+a.noDec:hover, a.noDec:active, a.noDec:focus{
+  text-decoration: none !important;
+}
+
+.icon-heart:hover{
+  color: red;
+}
+
 // Bootstrap Overrides
 .btn-primary, .btn-primary:hover, .btn-primary:active{
   background-color: $uniq;

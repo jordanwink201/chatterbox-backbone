@@ -11,22 +11,18 @@ var MessageFormView = Backbone.View.extend({
   },
 
   render : function(){
-    console.log(this.$el);
     var template = _.template( $('#messageForm').html(), {} );
     this.$el.html( template() );
   },
 
   submitMessage : function(){
-    var objToSend = {};
+    var message = {};
     var userNameArr = window.location.search.split('=');
-    objToSend.username = userNameArr[1];
-    objToSend.text = this.$el.find('input#message').val();
-    objToSend.room = this.$el.find('input#roomName').val();
+    message.username = userNameArr[1];
+    message.text = this.$el.find('input#message').val();
+    message.room = this.$el.find('input#roomName').val();
 
-
-    var newMessage = new Message(objToSend);
-    console.log('newMessage : ', newMessage);
-    newMessage.save();
+    this.collection.create(message);
   }
 
 });
