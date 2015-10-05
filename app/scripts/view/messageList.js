@@ -6,6 +6,7 @@ var MessageListView = Backbone.View.extend({
 
   template : _.template('<tbody><th>TIME</th> \
     <th>USER NAME</th> \
+    <th>ROOM</th> \
     <th>TEXT</th> \
     <th></th> \
     <th></th> \
