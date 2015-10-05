@@ -6,6 +6,11 @@ var Message = Backbone.Model.extend({
     'text' : 'default'
   },
 
-  url : 'https://api.parse.com/1/classes/chatterbox'
+  url : 'https://api.parse.com/1/classes/chatterbox',
+
+  addToFriendsList : function(name){
+    console.log('addToFriendsList', name);
+    
+  }
   
 });
