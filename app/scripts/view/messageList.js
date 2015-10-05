@@ -5,8 +5,8 @@ var MessageListView = Backbone.View.extend({
   tagName : 'tr',
 
   template : _.template('<tbody><th>TIME</th> \
-    <th>USER NAME</th> \
     <th>ROOM</th> \
+    <th>USER NAME</th> \
     <th>TEXT</th> \
     <th></th> \
     <th></th> \
@@ -17,6 +17,8 @@ var MessageListView = Backbone.View.extend({
   },
 
   render : function(){
+
+    console.log('rendering...');
 
     this.$el.html( this.template() ).append(
       this.collection.map(function(model){

@@ -1,7 +1,5 @@
 $(function(){
 
-
-
   var messageList = new Messages();
   messageList.loadMessages();
 

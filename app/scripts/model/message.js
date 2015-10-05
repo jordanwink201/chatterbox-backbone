@@ -4,6 +4,8 @@ var Message = Backbone.Model.extend({
     'username' : 'default',
     'room' : 'default',
     'text' : 'default'
-  }
+  },
+
+  url : 'https://api.parse.com/1/classes/chatterbox'
   
 });

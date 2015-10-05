@@ -4,7 +4,6 @@
 
 .form {
   padding: 1em 0;
-  border-bottom: 1px solid rgba(32, 33, 36, 0.10);
 }
 
 table{
@@ -22,6 +21,7 @@ table{
     &:first-child{
       height: 50px;
       border-bottom: 1px solid rgba(32, 33, 36, 0.10);
+      border-top: 1px solid rgba(32, 33, 36, 0.10);
     }
   }
 }

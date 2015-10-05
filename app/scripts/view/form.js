@@ -17,13 +17,16 @@ var MessageFormView = Backbone.View.extend({
   },
 
   submitMessage : function(){
-    console.log('collection : ', this.collection);
-    // get the input 
-    var message = this.$el.find('input').val();
-    // add to the collection?
-    // this.collection.add({
-    //   title : 
-    // })
+    var objToSend = {};
+    var userNameArr = window.location.search.split('=');
+    objToSend.username = userNameArr[1];
+    objToSend.text = this.$el.find('input#message').val();
+    objToSend.room = this.$el.find('input#roomName').val();
+
+
+    var newMessage = new Message(objToSend);
+    console.log('newMessage : ', newMessage);
+    newMessage.save();
   }
 
 });

@@ -5,7 +5,7 @@ var Messages = Backbone.Collection.extend({
   url : 'https://api.parse.com/1/classes/chatterbox',
 
   loadMessages : function(){
-    this.fetch();
+    this.fetch({data : { order: '-createdAt' }});
   },
 
   parse : function(results){
