@@ -26,7 +26,7 @@ var MessageView = Backbone.View.extend({
 
   removeMessage : function(e){
     e.preventDefault();
-    this.model.removeMessage(this.model)
+    this.model.removeMessage(this.model);
   }
 
 });

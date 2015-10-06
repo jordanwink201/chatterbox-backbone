@@ -10,6 +10,7 @@ var FriendListView = Backbone.View.extend({
 
   initialize : function(){
     this.render();
+    this.collection.on('add', this.render, this);
   },
 
   render : function(){
