@@ -19,6 +19,11 @@ a.noDec:hover, a.noDec:active, a.noDec:focus{
   color: red;
 }
 
+// Fixes
+.noPaddingRight{
+  padding-right: 0px !important;
+}
+
 // Bootstrap Overrides
 .btn-primary, .btn-primary:hover, .btn-primary:active{
   background-color: $uniq;

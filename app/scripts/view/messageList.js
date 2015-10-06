@@ -13,7 +13,7 @@ var MessageListView = Backbone.View.extend({
   </tbody>'),
 
   initialize : function(){
-    this.collection.on('sync', this.render, this);
+    this.collection.on('sync remove', this.render, this);
   },
 
   render : function(){

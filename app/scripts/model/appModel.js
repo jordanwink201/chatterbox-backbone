@@ -9,6 +9,13 @@ var AppModel = Backbone.Model.extend({
     this.messageList = new Messages();
     this.messageList.loadMessages();
 
+    this.messageList.on('addFriend', function(message){
+      
+    });
+
+    this.messageList.on('removeMessage', function(message){
+      this.messageList.remove(message);
+    }, this);
 
   }
 
