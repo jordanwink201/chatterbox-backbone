@@ -21,10 +21,7 @@ var MessageView = Backbone.View.extend({
 
   addFriend : function(e){
     e.preventDefault();
-    var friend = this.model.attributes.username;
-
-    this.model.addToFriendsList(friend);
-    
+    this.model.addToFriendsList(this.model);
   },
 
   removeMessage : function(e){

@@ -1,26 +1,7 @@
 $(function(){
 
-  var friends = [
-    {
-      username : 'Jordan Winkelman'
-    }
-  ];
-  // Friend View And List View
-  var friendList = new FriendList(friends);
-  var friendListView = new FriendListView({ collection : friendList });
+  var appModel = new AppModel();
 
-  // Message Collection
-  var messageList = new Messages();
-  messageList.loadMessages();
-
-  // Message View and List View
-  var messageListView = new MessageListView({collection : messageList});
-
-  $('#messageList').append(messageListView);
-
-  // Form View
-  // give it access to the collection so it can add a new message to the collection
-  var form = new MessageFormView({collection : messageList});
-
+  var appView = new AppView({model : appModel});
 
 });
