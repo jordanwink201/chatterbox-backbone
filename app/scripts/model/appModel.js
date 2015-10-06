@@ -9,6 +9,24 @@ var AppModel = Backbone.Model.extend({
     this.messageList = new Messages();
     this.messageList.loadMessages();
 
+    // Room Collection
+    var rooms = [
+      {
+        roomname : 'Room Number 1',
+      },
+      {
+        roomname : 'Room Number 2',
+      },
+      {
+        roomname : 'Room Number 3',
+      }
+    ];
+    this.roomList = new RoomsList(rooms);
+
+
+
+
+    // Listeners
     this.messageList.on('addFriend', function(message){
       this.friendList.add(message);
     }, this);

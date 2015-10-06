@@ -75,20 +75,13 @@
       <h1>Room Name Maker Square</h1>
       <div class="tabBG">
 
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active">
-            <a href="#activeProjects" role="tab" data-toggle="tab"><i class="icon-budicon-40"></i>Active Projects</a>
-          </li>
-          <li role="presentation">
-            <a href="#profile" role="tab" data-toggle="tab"><i class="icon-budicon-41"></i>Profile</a>
-          </li>
-          <li role="presentation">
-            <a href="#messages" role="tab" data-toggle="tab"><i class="icon-budicon-38"></i>Messages</a>
-          </li>
-          <li role="presentation">
-            <a href="#settings" role="tab" data-toggle="tab"><i class="icon-budicon-42"></i>Settings</a>
-          </li>
-        </ul>
+        <div id="roomlist">
+<!--           <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+              <a href="#activeProjects" role="tab" data-toggle="tab"><i class="icon-budicon-40"></i>Active Projects</a>
+            </li>
+          </ul -->
+        </div>
 
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane fade in active" id="activeProjects">
@@ -143,14 +136,19 @@
     <!-- Backbone -->
     <script src="scripts/model/message.js"></script>
     <script src="scripts/model/friend.js"></script>
+    <script src="scripts/model/room.js"></script>
     <script src="scripts/model/appModel.js"></script>
     <script src="scripts/collection/messages.js"></script>
     <script src="scripts/collection/friends.js"></script>
-    <script src="scripts/view/messageList.js"></script>
+    <script src="scripts/collection/rooms.js"></script>
     <script src="scripts/view/message.js"></script>
     <script src="scripts/view/form.js"></script>
-    <script src="scripts/view/friendList.js"></script>
     <script src="scripts/view/friend.js"></script>
+    <script src="scripts/view/room.js"></script>
+    <script src="scripts/view/messageList.js"></script>
+    <script src="scripts/view/friendList.js"></script>
+    <script src="scripts/view/roomList.js"></script>
+    
     <script src="scripts/view/appView.js"></script>
   
     <!-- App -->

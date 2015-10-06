@@ -17,7 +17,6 @@ var MessageListView = Backbone.View.extend({
   },
 
   render : function(){
-    console.log('rendering...');
     this.$el.html( this.template() ).append(
       this.collection.map(function(model){
         return new MessageView({model : model}).render();
