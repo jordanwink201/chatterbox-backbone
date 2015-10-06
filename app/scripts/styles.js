@@ -1,3 +1,4 @@
-// the 
-var width = $('.sideNav').css('width');
-$('.mainContent').css('margin-left', width);
+
+var width = $('.sideNav').innerWidth();
+// NEED TO FIX THIS LATER
+$('.mainContent').css('margin-left', width - 3);
