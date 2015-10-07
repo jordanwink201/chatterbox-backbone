@@ -4,10 +4,7 @@ var RoomView = Backbone.View.extend({
 
   className : '',
 
-  template : _.template('<a href="#activeProjects" role="tab" data-toggle="tab"> \
-    <i class="icon-budicon-40"></i> \
-    <%= roomname %></a> \
-  '),
+  template : _.template( $('#roomTab').html() ),
 
   initialize : function(){
     this.render();
