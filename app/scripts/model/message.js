@@ -8,8 +8,8 @@ var Message = Backbone.Model.extend({
 
   url : 'https://api.parse.com/1/classes/chatterbox',
 
-  addToFriendsList : function(message){
-    this.trigger('addFriend', this);
+  toggleFriend : function(message){
+    this.trigger('toggleFriend', this);
   },
 
   removeMessage : function(message){

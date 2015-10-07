@@ -11,7 +11,7 @@ var MessageView = Backbone.View.extend({
   '),
 
   events : {
-    'click .icon-heart' : 'addFriend',
+    'click .icon-heart' : 'toggleFriend',
     'click .icon-budicon-32' : 'removeMessage'
   },
 
@@ -19,9 +19,9 @@ var MessageView = Backbone.View.extend({
     return this.$el.html( this.template( this.model.attributes ) );
   },
 
-  addFriend : function(e){
+  toggleFriend : function(e){
     e.preventDefault();
-    this.model.addToFriendsList(this.model);
+    this.model.toggleFriend(this.model);
   },
 
   removeMessage : function(e){

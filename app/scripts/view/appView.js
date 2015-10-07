@@ -4,7 +4,8 @@ var AppView = Backbone.View.extend({
 
     // Friend Collection View
     this.friendListView = new FriendListView({ collection : this.model.friendList });
-
+    $('#friendList').append(this.friendListView.el);
+    
     // Message Collection View
     this.messageListView = new MessageListView({collection : this.model.messageList});
     $('#messageList').append(this.messageListView);

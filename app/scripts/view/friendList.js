@@ -1,6 +1,4 @@
 var FriendListView = Backbone.View.extend({
-  
-  el : '#friendList',
 
   tagName : 'ul',
 
@@ -10,7 +8,7 @@ var FriendListView = Backbone.View.extend({
 
   initialize : function(){
     this.render();
-    this.collection.on('add', this.render, this);
+    this.collection.on('add remove', this.render, this);
   },
 
   render : function(){

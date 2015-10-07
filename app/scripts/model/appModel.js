@@ -23,12 +23,15 @@ var AppModel = Backbone.Model.extend({
     ];
     this.roomList = new RoomsList(rooms);
 
-
-
-
     // Listeners
-    this.messageList.on('addFriend', function(message){
-      this.friendList.add(message);
+    this.messageList.on('toggleFriend', function(message){
+      console.log('this.friendList.contains(message) : ', this.friendList.contains(message));
+      if(!this.friendList.contains(message)){
+        this.friendList.add(message);
+      } else {
+        this.friendList.remove(message);
+      }
+      
     }, this);
 
     this.messageList.on('removeMessage', function(message){
