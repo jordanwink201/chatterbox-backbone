@@ -47,6 +47,15 @@
     </div>
   </script>
 
+  <script type="text/template" id="message">
+    <td><%= createdAt %></td>
+    <td><%= (room ? room : "") %></td>
+    <td><%= (username ? username : "") %></td>
+    <td><%= (text ? text : "") %></td>
+    <td><a class="noDec" href=""><i class="icon-heart"></i></a></td>
+    <td><a class="noDec" href=""><i class="icon-budicon-32"></i></a></td>
+  </script>
+
   <div class="col-xs-2 sideNav">
     <div class="flex-container">
 
