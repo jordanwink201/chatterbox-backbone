@@ -1,4 +1,4 @@
-var RoomView = Backbone.View.extend({
+var RoomTabView = Backbone.View.extend({
 
   tagName : 'li',
 

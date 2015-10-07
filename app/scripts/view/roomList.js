@@ -11,7 +11,7 @@ var RoomListView = Backbone.View.extend({
   render : function(){
     this.$el.append(
       this.collection.map(function(model){
-        var view = new RoomView({model : model});
+        var view = new RoomTabView({model : model});
         return view.el;
       })
     );
