@@ -48,6 +48,15 @@
     </div>
   </script>
 
+  <!-- Room Cotainer Item -->
+  <script type="text/template" id="roomItem">
+    <div role="tabpanel" class="tab-pane fade in active" id="<%= roomname %>">
+    <div class="jumbotron">
+      <div id="messageInputForm"></div>
+      <table id="messageList"></table>
+    </div>
+  </script>
+
   <!-- Individual Messages -->
   <script type="text/template" id="message">
     <td><%= createdAt %></td>
@@ -87,16 +96,10 @@
       <div class="tabBG">
 
         <!-- Room Tabs -->
-        <div>
-          <ul class="nav nav-tabs" id="roomTabs">
-
-          </ul>
-        </div>
+        <div id="roomTabs"></div>
 
         <!-- Room Tab Contents -->
-        <div class="tab-content" id="roomContents">
-
-        </div>
+        <div class="tab-content" id="roomContents"></div>
 
       </div>
     </div>

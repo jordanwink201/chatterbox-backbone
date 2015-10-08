@@ -19,7 +19,6 @@ var AppView = Backbone.View.extend({
     // Message Collection View
     this.messageListView = new MessageListView({collection : this.model.messageList});
     $('#messageList').append(this.messageListView);
-    console.log('done with the app view');
 
     // Form View
     this.form = new MessageFormView({collection : this.model.messageList});
