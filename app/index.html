@@ -59,24 +59,42 @@
   </script>
 
   <!-- Rooms -->
-  <script type="text/template" id="roomTab">
-    <a href="#activeProjects" role="tab" data-toggle="tab"><i class="icon-budicon-40"></i><%= roomname %></a>
+  <script type="text/template" id="room">
+    <div>
+      <ul class="nav nav-tabs" id="roomTabs">
+
+      </ul>
+    </div>
+
+    <div class="tab-content" id="roomContents">
+
+      <div role="tabpanel" class="tab-pane fade in active" id="<% roomname %>">
+
+        <div class="jumbotron">
+
+          <div id="messageInputForm"></div> // Form View
+
+          <table id="messageList"></table> // Message Collection View
+
+        </div>
+
+      </div>
+
+    </div>
   </script>
 
-
+  <script type="text/template" id="roomTab">
+    <a href="#<%= roomname %>" role="tab" data-toggle="tab"><i class="icon-budicon-40"></i><%= roomname %></a>
+  </script>
 
   <script type="text/template" id="rooms">
-
     <div role="tabpanel" class="tab-pane fade in active" id="<%= roomname %>">
-
       <div class="jumbotron">
-
         <div id="messageInputForm"></div>
 
         <table id="messageList"></table>
 
       </div>
-      
     </div>
   </script>
 
@@ -178,7 +196,7 @@
     <script src="scripts/view/roomTab.js"></script>
     <script src="scripts/view/messageList.js"></script>
     <script src="scripts/view/friendList.js"></script>
-    <script src="scripts/view/roomList.js"></script>
+    <script src="scripts/view/roomListTab.js"></script>
     
     <script src="scripts/view/appView.js"></script>
   

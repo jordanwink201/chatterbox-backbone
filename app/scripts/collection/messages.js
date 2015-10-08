@@ -9,13 +9,23 @@ var Messages = Backbone.Collection.extend({
   },
 
   parse : function(response){
-    console.log('parsing...');
     var results = [];
-    for (var i = response.results.length - 1; i >= 50; i--) {
-      // console.log('response.results[i] : ', response.results[i]);
+    var rooms = [];
+    for (var i = response.results.length - 1; i >= 80; i--) {
       results.push(response.results[i]);
+
+      // Get the List of Rooms
+      if (response.results[i].room && rooms.indexOf(response.results[i].room) === -1) {
+        rooms.push(response.results[i].room);
+      }
+
     }
+
     return results;
+  },
+
+  doSomething: function(rooms){
+
   }
 
 
