@@ -23,7 +23,6 @@ var AppModel = Backbone.Model.extend({
     // Message Collection
     this.messageList = new Messages();
     
-
     // Message List Listeners
     this.messageList.on('toggleFriend', function(message){
       if(!this.friendList.contains(message)){
@@ -44,7 +43,7 @@ var AppModel = Backbone.Model.extend({
       this.messageList.loadMessages();
 
       // Set the h1 tag to be the room name as well
-      $('h1').text(room);
+      $('#roomTitle').text(room);
 
     }, this);
 
