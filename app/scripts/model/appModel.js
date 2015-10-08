@@ -43,6 +43,9 @@ var AppModel = Backbone.Model.extend({
       // Load the messages
       this.messageList.loadMessages();
 
+      // Set the h1 tag to be the room name as well
+      $('h1').text(room);
+
     }, this);
 
   }
