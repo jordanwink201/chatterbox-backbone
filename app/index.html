@@ -58,46 +58,6 @@
     <td><a class="noDec" href=""><i class="icon-budicon-32"></i></a></td>
   </script>
 
-  <!-- Rooms -->
-  <script type="text/template" id="room">
-    <div>
-      <ul class="nav nav-tabs" id="roomTabs">
-
-      </ul>
-    </div>
-
-    <div class="tab-content" id="roomContents">
-
-      <div role="tabpanel" class="tab-pane fade in active" id="<% roomname %>">
-
-        <div class="jumbotron">
-
-          <div id="messageInputForm"></div> // Form View
-
-          <table id="messageList"></table> // Message Collection View
-
-        </div>
-
-      </div>
-
-    </div>
-  </script>
-
-  <script type="text/template" id="roomTab">
-    <a href="#<%= roomname %>" role="tab" data-toggle="tab"><i class="icon-budicon-40"></i><%= roomname %></a>
-  </script>
-
-  <script type="text/template" id="rooms">
-    <div role="tabpanel" class="tab-pane fade in active" id="<%= roomname %>">
-      <div class="jumbotron">
-        <div id="messageInputForm"></div>
-
-        <table id="messageList"></table>
-
-      </div>
-    </div>
-  </script>
-
   <div class="col-xs-2 sideNav">
     <div class="flex-container">
 
@@ -126,31 +86,16 @@
       <h1>Room Name Maker Square</h1>
       <div class="tabBG">
 
-        <div id="roomlist">
-          
+        <!-- Room Tabs -->
+        <div>
+          <ul class="nav nav-tabs" id="roomTabs">
+
+          </ul>
         </div>
 
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane fade in active" id="activeProjects">
+        <!-- Room Tab Contents -->
+        <div class="tab-content" id="roomContents">
 
-            <div class="jumbotron">
-
-              <div id="messageInputForm"></div>
-
-              <table id="messageList"></table>
-
-            </div>
-
-          </div>
-          <div role="tabpanel" class="tab-pane fade" id="profile">
-            
-          </div>
-          <div role="tabpanel" class="tab-pane fade" id="messages">
-            
-          </div>
-          <div role="tabpanel" class="tab-pane fade" id="settings">
-            
-          </div>
         </div>
 
       </div>
@@ -197,6 +142,8 @@
     <script src="scripts/view/messageList.js"></script>
     <script src="scripts/view/friendList.js"></script>
     <script src="scripts/view/roomListTab.js"></script>
+    <script src="scripts/view/roomList.js"></script>
+    <script src="scripts/view/roomList.js"></script>
     
     <script src="scripts/view/appView.js"></script>
   
@@ -205,3 +152,16 @@
 
   </body>
 </html>
+
+
+<!--             <div role="tabpanel" class="tab-pane fade in active" id="<%= roomname %>">
+
+            <div class="jumbotron">
+
+              <div id="messageInputForm"></div> 
+
+              <table id="messageList"></table>
+
+            </div>
+
+          </div> -->

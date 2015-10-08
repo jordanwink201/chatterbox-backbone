@@ -10,9 +10,18 @@ var AppView = Backbone.View.extend({
     this.messageListView = new MessageListView({collection : this.model.messageList});
     $('#messageList').append(this.messageListView);
 
-    // Room Collection View
+    // Room Tab View
     this.RoomListTabView = new RoomListTabView({ collection : this.model.roomList });
-    $('#roomlist').append(this.RoomListTabView.el);
+    $('#roomTabs').append(this.RoomListTabView.el);
+
+    // Room Collection
+    this.RoomListTabView.collection.map(function(model){
+        var view = new RoomListView({ model : model });
+        $('#roomContents').append(view.el);
+    });
+
+    // #roomContents
+
 
     // Form View
     this.form = new MessageFormView({collection : this.model.messageList});
