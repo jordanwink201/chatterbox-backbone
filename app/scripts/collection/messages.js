@@ -9,6 +9,7 @@ var Messages = Backbone.Collection.extend({
   },
 
   parse : function(response){
+    console.log('loading messages...');
     var results = [];
     var rooms = [];
     for (var i = response.results.length - 1; i >= 80; i--) {

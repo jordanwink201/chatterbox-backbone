@@ -2,12 +2,6 @@
 var AppModel = Backbone.Model.extend({
 
   initialize : function(){
-    // Friend Collection
-    this.friendList = new FriendList();
-
-    // Message Collection
-    this.messageList = new Messages();
-    this.messageList.loadMessages();
 
     // Room Collection
     var rooms = [
@@ -23,7 +17,14 @@ var AppModel = Backbone.Model.extend({
     ];
     this.roomList = new RoomsList(rooms);
 
-    // Listeners
+    // Friend Collection
+    this.friendList = new FriendList();
+
+    // Message Collection
+    this.messageList = new Messages();
+    
+
+    // Message List Listeners
     this.messageList.on('toggleFriend', function(message){
       if(!this.friendList.contains(message)){
         this.friendList.add(message);
@@ -34,6 +35,14 @@ var AppModel = Backbone.Model.extend({
 
     this.messageList.on('removeMessage', function(message){
       this.messageList.remove(message);
+    }, this);
+
+    // Room List Listeners
+    this.roomList.on('getRoomMessages', function(room){
+      console.log('get room messages for room : ', room);
+      // Load the messages
+      this.messageList.loadMessages();
+
     }, this);
 
   }
