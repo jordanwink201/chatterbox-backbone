@@ -3,6 +3,10 @@ var AppView = Backbone.View.extend({
   initialize : function(){
 
     // Modal View
+    this.modalView = new ModalView({ model : this.model.modal });
+    $('body').append(this.modalView.el);
+    $('#roomModal').modal('show');
+
 
     // Friend Collection View
     this.friendListView = new FriendListView({ collection : this.model.friendList });
@@ -15,7 +19,6 @@ var AppView = Backbone.View.extend({
     // Room Collection
     this.RoomListTabView.collection.map(function(model){
         var view = new RoomListView({ model : model });
-        console.log('view : ', view.el);
         $('#roomContents').append(view.el);
     });
 
