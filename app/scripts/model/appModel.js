@@ -28,9 +28,10 @@ var AppModel = Backbone.Model.extend({
       console.log('go to room : ', room);
 
       // call the getRoomMessages function and pass the room name
-
-      // $('#roomModal').modal('hide');
-    });
+      
+      this.roomList.trigger('getRoomMessages', room);
+      $('#roomModal').modal('hide');
+    }, this);
     
     // Message List Listeners
     this.messageList.on('toggleFriend', function(message){
