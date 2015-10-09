@@ -9,7 +9,7 @@ var AppModel = Backbone.Model.extend({
     this.modal = new Modal();
 
     // Room Collection
-    var rooms = [ { roomname : 'Room Number 1',}, { roomname : 'Room Number 2',}, { roomname : 'Room Number 3', } ];
+    var rooms = [ { roomname : 'Maker Square',}, { roomname : 'Hack Reactor',}, { roomname : 'App Academy', } ];
     this.roomList = new RoomsList(rooms);
 
     // Friend Collection
@@ -20,15 +20,10 @@ var AppModel = Backbone.Model.extend({
 
     // Modal Listeners
     this.modal.on('enterRoom', function(modal){
-      console.log('enter the room now');
-
-      // how to select a room?
       // find the room 
       var room = modal.get('selectedRoom');
-      console.log('go to room : ', room);
 
-      // call the getRoomMessages function and pass the room name
-      
+      // call the getRoomMessages function and pass the room name      
       this.roomList.trigger('getRoomMessages', room);
       $('#roomModal').modal('hide');
     }, this);
