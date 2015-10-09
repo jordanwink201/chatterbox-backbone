@@ -7,7 +7,6 @@ var AppView = Backbone.View.extend({
     $('body').append(this.modalView.el);
     $('#roomModal').modal('show');
 
-
     // Friend Collection View
     this.friendListView = new FriendListView({ collection : this.model.friendList });
     $('#friendList').append(this.friendListView.el);

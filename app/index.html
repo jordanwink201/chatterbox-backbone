@@ -40,20 +40,18 @@
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="myModalLabel"><%= title %></h4>
           </div>
-          <div class="modal-body">
-            <ul>
-              <% _.each(roomList, function(room){ %>
-                <li>
-                  <input type="checkbox" aria-label="..."><%= room %>
-                </li>
-              <% }); %>
-            </ul>
+          <div class="modal-body list-group">
+
+            <% _.each(roomList, function(room){ %>
+              <button type="button" class="list-group-item"><%= room %></button>
+            <% }); %>
+          
           </div>
           <div class="modal-footer">
             <div class="input-group form">
               <input type="text" class="form-control" id="username" placeholder="Enter Username...">
               <span class="input-group-btn">
-                <button class="btn btn-primary" type="submit">Get Started</button>
+                <button id="submit" class="btn btn-primary" type="submit">Get Started</button>
               </span>
             </div>
           </div>

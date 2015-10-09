@@ -3,7 +3,8 @@ var ModalView = Backbone.View.extend({
   template : _.template( $('#modalTemplate').html() ),
 
   events : {
-    'click a' : 'getRoom'
+    'click button.list-group-item' : 'toggleSelection',
+    'click #submit' : 'enterRoom'
   },
 
   initialize : function(){
@@ -15,11 +16,19 @@ var ModalView = Backbone.View.extend({
     return this.$el.html( this.template(this.model.attributes) );
   },
 
-  getRoom : function(){
-    // close the modal
-    console.log("this : ", this.model);
-    // get the specified roomname
-    console.log('get the room');
-  }
+  toggleSelection : function(e){
+    var item = e.target;
+    this.model.set({ selectedRoom : $(item).text() });
+    $(item).toggleClass('active');
+  },
+
+  enterRoom : function(e){
+    // Set the Username
+    var item = this.$el.find('input');    
+    this.model.set({ user : $(item).val() });
+
+    // trigger a function
+    this.model.enterRoom();
+  } 
 
 });

@@ -3,6 +3,8 @@ var AppModel = Backbone.Model.extend({
 
   initialize : function(){
 
+    this.username = 'Jordan';
+
     // Modal
     this.modal = new Modal();
 
@@ -15,6 +17,20 @@ var AppModel = Backbone.Model.extend({
 
     // Message Collection
     this.messageList = new Messages();
+
+    // Modal Listeners
+    this.modal.on('enterRoom', function(modal){
+      console.log('enter the room now');
+
+      // how to select a room?
+      // find the room 
+      var room = modal.get('selectedRoom');
+      console.log('go to room : ', room);
+
+      // call the getRoomMessages function and pass the room name
+
+      // $('#roomModal').modal('hide');
+    });
     
     // Message List Listeners
     this.messageList.on('toggleFriend', function(message){

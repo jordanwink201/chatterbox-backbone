@@ -25,6 +25,13 @@ a.noDec:hover, a.noDec:active, a.noDec:focus{
 }
 
 // Bootstrap Overrides
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus{
+  background-color: #FC2015;
+  border-color: #FC2015;
+}
+.list-group{
+  margin-bottom: 0px;
+}
 .btn-primary, .btn-primary:hover, .btn-primary:active{
   background-color: $uniq;
   border-color: $uniq;
