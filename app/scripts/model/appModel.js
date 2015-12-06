@@ -50,16 +50,7 @@ var AppModel = Backbone.Model.extend({
       // Set the h1 tag to be the room name as well
       $('#roomTitle').text(room);
 
-      // $('a[href$="ABC"]')
-      var lookup = 'a[href="' + room + '"]';
-      console.log('lookup : ', lookup);
-      var x = $(lookup);
-      
-      
-        if($('#roomTabs li a').attr('href') === 'App Academy'){
-          console.log('got it');
-        }
-      
+      // Should set the room tab to have a '.active' class
       
 
     }, this);
